@@ -1,5 +1,6 @@
 
 using Gtk;
+using GlobalDefinitions;
 
 class FluffyUI : GLib.Object {
 
@@ -7,14 +8,14 @@ class FluffyUI : GLib.Object {
 
 	public FluffyUI() {;
 		this.window = new Window();
-		this.window.title = "fluffy-text";
+		this.window.title = "fluffy-text r" + GlobalDefinitions.GIT_REVISION;
 		this.window.destroy.connect(Gtk.main_quit);
 		this.init_controls();
+		this.window.show_all();
 		Gtk.main();
 	}
 
 	private void init_controls() {
-		
 	}
 
 }
